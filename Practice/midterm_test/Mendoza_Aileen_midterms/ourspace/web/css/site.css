@@ -1,7 +1,8 @@
 html,
 body {
     height: 100%;
-	background-color: #00FFFF;
+	background-color: #66CCFF; 
+	font-family: 'Courier New';
 }
 
 .wrap {
@@ -28,6 +29,7 @@ body {
 }
 
 .jumbotron .btn {
+	font-family: 'Comic Sans MS';
     font-size: 21px;
     padding: 14px 24px;
 }
