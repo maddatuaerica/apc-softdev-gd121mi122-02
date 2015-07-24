@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2015 at 07:11 AM
+-- Generation Time: Jul 24, 2015 at 09:15 AM
 -- Server version: 5.6.14
 -- PHP Version: 5.5.6
 
@@ -23,11 +23,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `class`
+-- Table structure for table `classes`
 --
 
-CREATE TABLE IF NOT EXISTS `class` (
-  `Class_id` char(100) NOT NULL,
+CREATE TABLE IF NOT EXISTS `classes` (
+  `Class_id` char(50) NOT NULL,
   `Section` varchar(100) NOT NULL,
   `Subject_code` char(100) NOT NULL,
   `Student_id` char(100) NOT NULL,
@@ -104,10 +104,10 @@ CREATE TABLE IF NOT EXISTS `teacher` (
 --
 
 --
--- Constraints for table `class`
+-- Constraints for table `classes`
 --
-ALTER TABLE `class`
-  ADD CONSTRAINT `class_ibfk_1` FOREIGN KEY (`Class_id`) REFERENCES `teacher` (`Teacher_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `classes`
+  ADD CONSTRAINT `classes_ibfk_1` FOREIGN KEY (`Class_id`) REFERENCES `teacher` (`Teacher_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `subject`
