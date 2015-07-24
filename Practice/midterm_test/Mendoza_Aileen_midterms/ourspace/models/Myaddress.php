@@ -13,6 +13,11 @@ use Yii;
  * @property string $lastname
  * @property string $gender
  * @property string $created_at
+ * @property string $home_address
+ * @property string $landline
+ * @property string $cellphone
+ *
+ * @property Mycomment[] $mycomments
  */
 class Myaddress extends \yii\db\ActiveRecord
 {
@@ -33,7 +38,9 @@ class Myaddress extends \yii\db\ActiveRecord
             [['firstname', 'middlename', 'lastname', 'gender'], 'required'],
             [['created_at'], 'safe'],
             [['firstname', 'middlename', 'lastname'], 'string', 'max' => 30],
-            [['gender'], 'string', 'max' => 1]
+            [['gender'], 'string', 'max' => 1],
+            [['home_address'], 'string', 'max' => 50],
+            [['landline', 'cellphone'], 'string', 'max' => 20]
         ];
     }
 
@@ -49,6 +56,17 @@ class Myaddress extends \yii\db\ActiveRecord
             'lastname' => 'Lastname',
             'gender' => 'Gender',
             'created_at' => 'Created At',
+            'home_address' => 'Home Address',
+            'landline' => 'Landline',
+            'cellphone' => 'Cellphone',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getMycomments()
+    {
+        return $this->hasMany(Mycomment::className(), ['myaddress_id' => 'id']);
     }
 }
