@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2015 at 11:26 PM
+-- Generation Time: Jul 25, 2015 at 02:32 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -35,8 +35,19 @@ CREATE TABLE IF NOT EXISTS `myaddress` (
   `lastname` varchar(30) NOT NULL,
   `gender` varchar(1) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `home_address` varchar(50) DEFAULT NULL,
+  `landline` varchar(20) DEFAULT NULL,
+  `cellphone` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `created_at` (`created_at`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `myaddress`
+--
+
+INSERT INTO `myaddress` (`id`, `firstname`, `middlename`, `lastname`, `gender`, `created_at`, `home_address`, `landline`, `cellphone`) VALUES
+(1, 'Aileen', 'Vista', 'Mendoza', 'F', '2015-07-24 21:39:22', 'Tanay, Rizal', '1234567', '09156789012');
 
 -- --------------------------------------------------------
 
@@ -63,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `mycomment` (
 -- Constraints for table `mycomment`
 --
 ALTER TABLE `mycomment`
-  ADD CONSTRAINT `mycomment_ibfk_1` FOREIGN KEY (`myaddress_id`) REFERENCES `myaddress` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `mycomment_ibfk1` FOREIGN KEY (`myaddress_id`) REFERENCES `myaddress` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

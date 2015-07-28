@@ -12,6 +12,8 @@ use Yii;
  * @property string $author
  * @property string $body
  * @property string $created_at
+ *
+ * @property Myaddress $myaddress
  */
 class Mycomment extends \yii\db\ActiveRecord
 {
@@ -29,7 +31,7 @@ class Mycomment extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['mycomment_id', 'author', 'body'], 'required'],
+            [['myaddress_id', 'author', 'body'], 'required'],
             [['myaddress_id'], 'integer'],
             [['body'], 'string'],
             [['created_at'], 'safe'],
@@ -49,5 +51,13 @@ class Mycomment extends \yii\db\ActiveRecord
             'body' => 'Body',
             'created_at' => 'Created At',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getMyaddress()
+    {
+        return $this->hasOne(Myaddress::className(), ['id' => 'myaddress_id']);
     }
 }
