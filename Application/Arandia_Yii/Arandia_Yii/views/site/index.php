@@ -34,11 +34,12 @@ $this->title = 'Arandia College';
             <div class="col-lg-4">
                 <h2>Offers:</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-            </div>
+                <p>Nursery - 3 years and 3 years old and a half by June of the academic year.</p>
+				<p>Kinder - 4 years and 4 years old and a half by June of the academic year.</p>
+				<p>Preparatory - 5 years and 5 years old and a half by June of the academic year.</p>
+				<p> Elementary</p>
+				<p>High School</p>
+			</div>
         </div>
 
     </div>
