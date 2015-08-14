@@ -12,13 +12,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, '1st_grading')->textInput(['maxlength' => 10]) ?>
+    <?= $form->field($model, 'first_grading')->textInput(['maxlength' => 10]) ?>
 
-    <?= $form->field($model, '2nd_grading')->textInput(['maxlength' => 10]) ?>
+    <?= $form->field($model, 'second_grading')->textInput(['maxlength' => 10]) ?>
 
-    <?= $form->field($model, '3rd_grading')->textInput(['maxlength' => 10]) ?>
+    <?= $form->field($model, 'third_grading')->textInput(['maxlength' => 10]) ?>
 
-    <?= $form->field($model, '4th_grading')->textInput(['maxlength' => 10]) ?>
+    <?= $form->field($model, 'fourth_grading')->textInput(['maxlength' => 10]) ?>
 
     <?= $form->field($model, 'Final_grading')->textInput() ?>
 

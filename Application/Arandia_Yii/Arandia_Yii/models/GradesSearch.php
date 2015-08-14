@@ -18,7 +18,7 @@ class GradesSearch extends Grades
     public function rules()
     {
         return [
-            [['1st_grading', '2nd_grading', '3rd_grading', '4th_grading'], 'number'],
+            [['first_grading', 'second_grading', 'third_grading', 'fourth_grading'], 'number'],
             [['Final_grading', 'Subject_code', 'Student_id'], 'safe'],
         ];
     }
@@ -56,10 +56,10 @@ class GradesSearch extends Grades
         }
 
         $query->andFilterWhere([
-            '1st_grading' => $this->1st_grading,
-            '2nd_grading' => $this->2nd_grading,
-            '3rd_grading' => $this->3rd_grading,
-            '4th_grading' => $this->4th_grading,
+            'first_grading' => $this->first_grading,
+            'second_grading' => $this->second_grading,
+            'third_grading' => $this->third_grading,
+            'fourth_grading' => $this->fourth_grading,
             'Final_grading' => $this->Final_grading,
         ]);
 

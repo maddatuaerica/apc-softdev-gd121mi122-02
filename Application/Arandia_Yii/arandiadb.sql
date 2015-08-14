@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2015 at 05:45 AM
+-- Generation Time: Aug 14, 2015 at 07:14 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -48,14 +48,46 @@ CREATE TABLE IF NOT EXISTS `classes` (
 --
 
 CREATE TABLE IF NOT EXISTS `grades` (
-  `1st_grading` decimal(10,0) NOT NULL,
-  `2nd_grading` decimal(10,0) NOT NULL,
-  `3rd_grading` decimal(10,0) NOT NULL,
-  `4th_grading` decimal(10,0) NOT NULL,
+  `first_grading` decimal(10,0) NOT NULL,
+  `second_grading` decimal(10,0) NOT NULL,
+  `third_grading` decimal(10,0) NOT NULL,
+  `fourth_grading` decimal(10,0) NOT NULL,
   `Final_grading` date NOT NULL,
   `Subject_code` char(20) NOT NULL,
   `Student_id` char(15) NOT NULL,
   PRIMARY KEY (`Student_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `register`
+--
+
+CREATE TABLE IF NOT EXISTS `register` (
+  `id_number` char(10) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `middlename` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `birthday` date NOT NULL,
+  `birthplace` varchar(100) NOT NULL,
+  `gender` tinyint(1) NOT NULL,
+  `age` int(11) NOT NULL,
+  `contact_num` int(11) NOT NULL,
+  `grade_level` varchar(45) NOT NULL,
+  `prev_school` varchar(100) NOT NULL,
+  `father_name` varchar(50) NOT NULL,
+  `father_occupation` varchar(50) NOT NULL,
+  `mother_name` varchar(50) NOT NULL,
+  `mother_occupation` varchar(50) NOT NULL,
+  `emerg_name` varchar(50) NOT NULL,
+  `relation` varchar(45) NOT NULL,
+  `tel_num` int(11) NOT NULL,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `usertype` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

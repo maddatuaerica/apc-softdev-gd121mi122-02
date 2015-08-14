@@ -15,13 +15,13 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, '1st_grading') ?>
+    <?= $form->field($model, 'first_grading') ?>
 
-    <?= $form->field($model, '2nd_grading') ?>
+    <?= $form->field($model, 'second_grading') ?>
 
-    <?= $form->field($model, '3rd_grading') ?>
+    <?= $form->field($model, 'third_grading') ?>
 
-    <?= $form->field($model, '4th_grading') ?>
+    <?= $form->field($model, 'fourth_grading') ?>
 
     <?= $form->field($model, 'Final_grading') ?>
 

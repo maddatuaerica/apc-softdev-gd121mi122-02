@@ -28,10 +28,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            '1st_grading',
-            '2nd_grading',
-            '3rd_grading',
-            '4th_grading',
+            'first_grading',
+            'second_grading',
+            'third_grading',
+            'fourth_grading',
             'Final_grading',
             'Subject_code',
             'Student_id',
