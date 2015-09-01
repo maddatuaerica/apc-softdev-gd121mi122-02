@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Subject_code') ?>
 
-    <?= $form->field($model, 'Subject_desc') ?>
+    <?= $form->field($model, 'Subject_description') ?>
 
     <?= $form->field($model, 'Teacher_id') ?>
 
