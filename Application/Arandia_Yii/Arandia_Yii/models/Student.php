@@ -8,16 +8,16 @@ use Yii;
  * This is the model class for table "student".
  *
  * @property string $Student_id
- * @property string $Student_lname
- * @property string $Student_fname
- * @property string $Student_mname
+ * @property string $Student_lastname
+ * @property string $Student_firstname
+ * @property string $Student_middlename
  * @property string $Student_email
- * @property string $Student_addr
- * @property string $Student_cont
+ * @property string $Student_address
+ * @property string $Student_contact
  *
  * @property Classes[] $classes
  */
-class Student extends \yii\db\ActiveRecord
+class student extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -33,10 +33,10 @@ class Student extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Student_id', 'Student_lname', 'Student_fname', 'Student_mname', 'Student_email', 'Student_addr', 'Student_cont'], 'required'],
+            [['Student_id', 'Student_lastname', 'Student_firstname', 'Student_middlename', 'Student_email', 'Student_address', 'Student_contact'], 'required'],
             [['Student_id'], 'string', 'max' => 15],
-            [['Student_lname', 'Student_fname', 'Student_mname', 'Student_email', 'Student_cont'], 'string', 'max' => 45],
-            [['Student_addr'], 'string', 'max' => 100]
+            [['Student_lastname', 'Student_firstname', 'Student_middlename', 'Student_email', 'Student_contact'], 'string', 'max' => 45],
+            [['Student_address'], 'string', 'max' => 100]
         ];
     }
 
@@ -47,12 +47,12 @@ class Student extends \yii\db\ActiveRecord
     {
         return [
             'Student_id' => 'Student ID',
-            'Student_lname' => 'Student Lname',
-            'Student_fname' => 'Student Fname',
-            'Student_mname' => 'Student Mname',
+            'Student_lastname' => 'Student Lastname',
+            'Student_firstname' => 'Student Firstname',
+            'Student_middlename' => 'Student Middlename',
             'Student_email' => 'Student Email',
-            'Student_addr' => 'Student Addr',
-            'Student_cont' => 'Student Cont',
+            'Student_address' => 'Student Address',
+            'Student_contact' => 'Student Contact',
         ];
     }
 

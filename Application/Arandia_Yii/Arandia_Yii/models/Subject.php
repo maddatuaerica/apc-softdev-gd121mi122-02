@@ -8,7 +8,7 @@ use Yii;
  * This is the model class for table "subject".
  *
  * @property string $Subject_code
- * @property string $Subject_desc
+ * @property string $Subject_description
  * @property integer $Teacher_id
  *
  * @property Classes[] $classes
@@ -29,10 +29,10 @@ class Subject extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Subject_code', 'Subject_desc', 'Teacher_id'], 'required'],
+            [['Subject_code', 'Subject_description', 'Teacher_id'], 'required'],
             [['Teacher_id'], 'integer'],
             [['Subject_code'], 'string', 'max' => 20],
-            [['Subject_desc'], 'string', 'max' => 45]
+            [['Subject_description'], 'string', 'max' => 45]
         ];
     }
 
@@ -43,7 +43,7 @@ class Subject extends \yii\db\ActiveRecord
     {
         return [
             'Subject_code' => 'Subject Code',
-            'Subject_desc' => 'Subject Desc',
+            'Subject_description' => 'Subject Description',
             'Teacher_id' => 'Teacher ID',
         ];
     }

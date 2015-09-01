@@ -29,12 +29,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'Student_id',
-            'Student_lname',
-            'Student_fname',
-            'Student_mname',
+            'Student_lastname',
+            'Student_firstname',
+            'Student_middlename',
             'Student_email:email',
-            'Student_addr',
-            'Student_cont',
+            'Student_address',
+            'Student_contact',
         ],
     ]) ?>
 

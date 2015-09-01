@@ -18,7 +18,7 @@ class StudentSearch extends Student
     public function rules()
     {
         return [
-            [['Student_id', 'Student_lname', 'Student_fname', 'Student_mname', 'Student_email', 'Student_addr', 'Student_cont'], 'safe'],
+            [['Student_id', 'Student_lastname', 'Student_firstname', 'Student_middlename', 'Student_email', 'Student_address', 'Student_contact'], 'safe'],
         ];
     }
 
@@ -55,12 +55,12 @@ class StudentSearch extends Student
         }
 
         $query->andFilterWhere(['like', 'Student_id', $this->Student_id])
-            ->andFilterWhere(['like', 'Student_lname', $this->Student_lname])
-            ->andFilterWhere(['like', 'Student_fname', $this->Student_fname])
-            ->andFilterWhere(['like', 'Student_mname', $this->Student_mname])
+            ->andFilterWhere(['like', 'Student_lastname', $this->Student_lastname])
+            ->andFilterWhere(['like', 'Student_firstname', $this->Student_firstname])
+            ->andFilterWhere(['like', 'Student_middlename', $this->Student_middlename])
             ->andFilterWhere(['like', 'Student_email', $this->Student_email])
-            ->andFilterWhere(['like', 'Student_addr', $this->Student_addr])
-            ->andFilterWhere(['like', 'Student_cont', $this->Student_cont]);
+            ->andFilterWhere(['like', 'Student_address', $this->Student_address])
+            ->andFilterWhere(['like', 'Student_contact', $this->Student_contact]);
 
         return $dataProvider;
     }
