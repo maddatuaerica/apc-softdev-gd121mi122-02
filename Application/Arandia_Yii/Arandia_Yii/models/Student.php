@@ -17,7 +17,7 @@ use Yii;
  *
  * @property Classes[] $classes
  */
-class student extends \yii\db\ActiveRecord
+class Student extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

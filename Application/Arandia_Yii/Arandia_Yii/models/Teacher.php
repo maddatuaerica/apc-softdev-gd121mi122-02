@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "teacher".
  *
- * @property string $Teacher_id
+ * @property integer $id
  * @property string $Teacher_lastname
  * @property string $Teacher_firstname
  * @property string $Teacher_middlename
@@ -32,11 +32,11 @@ class Teacher extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Teacher_id', 'Teacher_lastname', 'Teacher_firstname', 'Teacher_middlename', 'Teacher_email', 'Teacher_address', 'Teacher_contact', 'Teacher_status'], 'required'],
-            [['Teacher_id', 'Teacher_status'], 'string', 'max' => 10],
+            [['Teacher_lastname', 'Teacher_firstname', 'Teacher_middlename', 'Teacher_email', 'Teacher_address', 'Teacher_contact', 'Teacher_status'], 'required'],
             [['Teacher_lastname', 'Teacher_firstname', 'Teacher_middlename', 'Teacher_email'], 'string', 'max' => 45],
             [['Teacher_address'], 'string', 'max' => 100],
-            [['Teacher_contact'], 'string', 'max' => 20]
+            [['Teacher_contact'], 'string', 'max' => 20],
+            [['Teacher_status'], 'string', 'max' => 10]
         ];
     }
 
@@ -46,7 +46,7 @@ class Teacher extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Teacher_id' => 'Teacher ID',
+            'id' => 'ID',
             'Teacher_lastname' => 'Teacher Lastname',
             'Teacher_firstname' => 'Teacher Firstname',
             'Teacher_middlename' => 'Teacher Middlename',
