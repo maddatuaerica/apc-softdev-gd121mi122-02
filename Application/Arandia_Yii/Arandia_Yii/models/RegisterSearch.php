@@ -18,8 +18,8 @@ class RegisterSearch extends Register
     public function rules()
     {
         return [
-            [['id_number', 'lastname', 'firstname', 'middlename', 'address', 'birthday', 'birthplace', 'gender', 'grade_level', 'previous_school', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'emergency_contact', 'relation', 'username', 'password', 'usertype'], 'safe'],
-            [['age', 'contact_number', 'telephone_number'], 'integer'],
+            [['id_number', 'lastname', 'firstname', 'middlename', 'address', 'birthday', 'birthplace', 'grade_level', 'prev_school', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'emerg_name', 'relation', 'username', 'password', 'usertype'], 'safe'],
+            [['gender', 'age', 'contact_num', 'tel_num'], 'integer'],
         ];
     }
 
@@ -57,9 +57,10 @@ class RegisterSearch extends Register
 
         $query->andFilterWhere([
             'birthday' => $this->birthday,
+            'gender' => $this->gender,
             'age' => $this->age,
-            'contact_number' => $this->contact_number,
-            'telephone_number' => $this->telephone_number,
+            'contact_num' => $this->contact_num,
+            'tel_num' => $this->tel_num,
         ]);
 
         $query->andFilterWhere(['like', 'id_number', $this->id_number])
@@ -68,14 +69,13 @@ class RegisterSearch extends Register
             ->andFilterWhere(['like', 'middlename', $this->middlename])
             ->andFilterWhere(['like', 'address', $this->address])
             ->andFilterWhere(['like', 'birthplace', $this->birthplace])
-            ->andFilterWhere(['like', 'gender', $this->gender])
             ->andFilterWhere(['like', 'grade_level', $this->grade_level])
-            ->andFilterWhere(['like', 'previous_school', $this->previous_school])
+            ->andFilterWhere(['like', 'prev_school', $this->prev_school])
             ->andFilterWhere(['like', 'father_name', $this->father_name])
             ->andFilterWhere(['like', 'father_occupation', $this->father_occupation])
             ->andFilterWhere(['like', 'mother_name', $this->mother_name])
             ->andFilterWhere(['like', 'mother_occupation', $this->mother_occupation])
-            ->andFilterWhere(['like', 'emergency_contact', $this->emergency_contact])
+            ->andFilterWhere(['like', 'emerg_name', $this->emerg_name])
             ->andFilterWhere(['like', 'relation', $this->relation])
             ->andFilterWhere(['like', 'username', $this->username])
             ->andFilterWhere(['like', 'password', $this->password])

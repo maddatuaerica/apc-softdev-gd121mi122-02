@@ -14,18 +14,18 @@ use Yii;
  * @property string $address
  * @property string $birthday
  * @property string $birthplace
- * @property string $gender
+ * @property integer $gender
  * @property integer $age
- * @property integer $contact_number
+ * @property integer $contact_num
  * @property string $grade_level
- * @property string $previous_school
+ * @property string $prev_school
  * @property string $father_name
  * @property string $father_occupation
  * @property string $mother_name
  * @property string $mother_occupation
- * @property string $emergency_contact
+ * @property string $emerg_name
  * @property string $relation
- * @property integer $telephone_number
+ * @property integer $tel_num
  * @property string $username
  * @property string $password
  * @property string $usertype
@@ -46,12 +46,12 @@ class Register extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_number', 'lastname', 'firstname', 'middlename', 'address', 'birthday', 'birthplace', 'gender', 'age', 'contact_number', 'grade_level', 'previous_school', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'emergency_contact', 'relation', 'telephone_number', 'username', 'password', 'usertype'], 'required'],
+            [['id_number', 'lastname', 'firstname', 'middlename', 'address', 'birthday', 'birthplace', 'gender', 'age', 'contact_num', 'grade_level', 'prev_school', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'emerg_name', 'relation', 'tel_num', 'username', 'password', 'usertype'], 'required'],
             [['birthday'], 'safe'],
-            [['age', 'contact_number', 'telephone_number'], 'integer'],
-            [['id_number', 'gender'], 'string', 'max' => 10],
-            [['lastname', 'firstname', 'middlename', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'emergency_contact'], 'string', 'max' => 50],
-            [['address', 'birthplace', 'previous_school'], 'string', 'max' => 100],
+            [['gender', 'age', 'contact_num', 'tel_num'], 'integer'],
+            [['id_number'], 'string', 'max' => 10],
+            [['lastname', 'firstname', 'middlename', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'emerg_name'], 'string', 'max' => 50],
+            [['address', 'birthplace', 'prev_school'], 'string', 'max' => 100],
             [['grade_level', 'relation', 'username', 'password', 'usertype'], 'string', 'max' => 45]
         ];
     }
@@ -71,16 +71,16 @@ class Register extends \yii\db\ActiveRecord
             'birthplace' => 'Birthplace',
             'gender' => 'Gender',
             'age' => 'Age',
-            'contact_number' => 'Contact Number',
+            'contact_num' => 'Contact Num',
             'grade_level' => 'Grade Level',
-            'previous_school' => 'Previous School',
+            'prev_school' => 'Prev School',
             'father_name' => 'Father Name',
             'father_occupation' => 'Father Occupation',
             'mother_name' => 'Mother Name',
             'mother_occupation' => 'Mother Occupation',
-            'emergency_contact' => 'Emergency Contact',
+            'emerg_name' => 'Emerg Name',
             'relation' => 'Relation',
-            'telephone_number' => 'Telephone Number',
+            'tel_num' => 'Tel Num',
             'username' => 'Username',
             'password' => 'Password',
             'usertype' => 'Usertype',

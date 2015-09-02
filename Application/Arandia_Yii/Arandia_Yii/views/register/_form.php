@@ -26,15 +26,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'birthplace')->textInput(['maxlength' => 100]) ?>
 
-    <?= $form->field($model, 'gender')->textInput(['maxlength' => 10]) ?>
+    <?= $form->field($model, 'gender')->textInput() ?>
 
     <?= $form->field($model, 'age')->textInput() ?>
 
-    <?= $form->field($model, 'contact_number')->textInput() ?>
+    <?= $form->field($model, 'contact_num')->textInput() ?>
 
     <?= $form->field($model, 'grade_level')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'previous_school')->textInput(['maxlength' => 100]) ?>
+    <?= $form->field($model, 'prev_school')->textInput(['maxlength' => 100]) ?>
 
     <?= $form->field($model, 'father_name')->textInput(['maxlength' => 50]) ?>
 
@@ -44,11 +44,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'mother_occupation')->textInput(['maxlength' => 50]) ?>
 
-    <?= $form->field($model, 'emergency_contact')->textInput(['maxlength' => 50]) ?>
+    <?= $form->field($model, 'emerg_name')->textInput(['maxlength' => 50]) ?>
 
     <?= $form->field($model, 'relation')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'telephone_number')->textInput() ?>
+    <?= $form->field($model, 'tel_num')->textInput() ?>
 
     <?= $form->field($model, 'username')->textInput(['maxlength' => 45]) ?>
 
