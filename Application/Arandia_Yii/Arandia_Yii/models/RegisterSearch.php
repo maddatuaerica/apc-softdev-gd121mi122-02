@@ -18,8 +18,8 @@ class RegisterSearch extends Register
     public function rules()
     {
         return [
-            [['id_number', 'lastname', 'firstname', 'middlename', 'address', 'birthday', 'birthplace', 'grade_level', 'previous_school', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'emergency_contact', 'relation', 'username', 'password', 'usertype'], 'safe'],
-            [['gender', 'age', 'contact_number', 'telephone_number'], 'integer'],
+            [['id_number', 'lastname', 'firstname', 'middlename', 'address', 'birthday', 'birthplace', 'gender', 'grade_level', 'previous_school', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'emergency_contact', 'relation', 'username', 'password', 'usertype'], 'safe'],
+            [['age', 'contact_number', 'telephone_number'], 'integer'],
         ];
     }
 
@@ -57,7 +57,6 @@ class RegisterSearch extends Register
 
         $query->andFilterWhere([
             'birthday' => $this->birthday,
-            'gender' => $this->gender,
             'age' => $this->age,
             'contact_number' => $this->contact_number,
             'telephone_number' => $this->telephone_number,
@@ -69,6 +68,7 @@ class RegisterSearch extends Register
             ->andFilterWhere(['like', 'middlename', $this->middlename])
             ->andFilterWhere(['like', 'address', $this->address])
             ->andFilterWhere(['like', 'birthplace', $this->birthplace])
+            ->andFilterWhere(['like', 'gender', $this->gender])
             ->andFilterWhere(['like', 'grade_level', $this->grade_level])
             ->andFilterWhere(['like', 'previous_school', $this->previous_school])
             ->andFilterWhere(['like', 'father_name', $this->father_name])

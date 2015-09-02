@@ -26,7 +26,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'birthplace')->textInput(['maxlength' => 100]) ?>
 
-    <?= $form->field($model, 'gender')->textInput() ?>
+    <?= $form->field($model, 'gender')->textInput(['maxlength' => 10]) ?>
 
     <?= $form->field($model, 'age')->textInput() ?>
 

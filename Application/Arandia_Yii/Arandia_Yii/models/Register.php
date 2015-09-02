@@ -14,7 +14,7 @@ use Yii;
  * @property string $address
  * @property string $birthday
  * @property string $birthplace
- * @property integer $gender
+ * @property string $gender
  * @property integer $age
  * @property integer $contact_number
  * @property string $grade_level
@@ -48,8 +48,8 @@ class Register extends \yii\db\ActiveRecord
         return [
             [['id_number', 'lastname', 'firstname', 'middlename', 'address', 'birthday', 'birthplace', 'gender', 'age', 'contact_number', 'grade_level', 'previous_school', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'emergency_contact', 'relation', 'telephone_number', 'username', 'password', 'usertype'], 'required'],
             [['birthday'], 'safe'],
-            [['gender', 'age', 'contact_number', 'telephone_number'], 'integer'],
-            [['id_number'], 'string', 'max' => 10],
+            [['age', 'contact_number', 'telephone_number'], 'integer'],
+            [['id_number', 'gender'], 'string', 'max' => 10],
             [['lastname', 'firstname', 'middlename', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'emergency_contact'], 'string', 'max' => 50],
             [['address', 'birthplace', 'previous_school'], 'string', 'max' => 100],
             [['grade_level', 'relation', 'username', 'password', 'usertype'], 'string', 'max' => 45]

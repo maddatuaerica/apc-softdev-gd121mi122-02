@@ -29,13 +29,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'Teacher_id',
-            'Teacher_lname',
-            'Teacher_fname',
-            'Teacher_mname',
+            'Teacher_lastname',
+            'Teacher_firstname',
+            'Teacher_middlename',
             'Teacher_email:email',
-            'Teacher_addr',
-            'Teacher_cont',
-            'Teacher_stat',
+            'Teacher_address',
+            'Teacher_contact',
+            'Teacher_status',
         ],
     ]) ?>
 

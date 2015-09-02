@@ -8,13 +8,13 @@ use Yii;
  * This is the model class for table "teacher".
  *
  * @property string $Teacher_id
- * @property string $Teacher_lname
- * @property string $Teacher_fname
- * @property string $Teacher_mname
+ * @property string $Teacher_lastname
+ * @property string $Teacher_firstname
+ * @property string $Teacher_middlename
  * @property string $Teacher_email
- * @property string $Teacher_addr
- * @property string $Teacher_cont
- * @property string $Teacher_stat
+ * @property string $Teacher_address
+ * @property string $Teacher_contact
+ * @property string $Teacher_status
  */
 class Teacher extends \yii\db\ActiveRecord
 {
@@ -32,11 +32,11 @@ class Teacher extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Teacher_id', 'Teacher_lname', 'Teacher_fname', 'Teacher_mname', 'Teacher_email', 'Teacher_addr', 'Teacher_cont', 'Teacher_stat'], 'required'],
-            [['Teacher_id', 'Teacher_stat'], 'string', 'max' => 10],
-            [['Teacher_lname', 'Teacher_fname', 'Teacher_mname', 'Teacher_email'], 'string', 'max' => 45],
-            [['Teacher_addr'], 'string', 'max' => 100],
-            [['Teacher_cont'], 'string', 'max' => 20]
+            [['Teacher_id', 'Teacher_lastname', 'Teacher_firstname', 'Teacher_middlename', 'Teacher_email', 'Teacher_address', 'Teacher_contact', 'Teacher_status'], 'required'],
+            [['Teacher_id', 'Teacher_status'], 'string', 'max' => 10],
+            [['Teacher_lastname', 'Teacher_firstname', 'Teacher_middlename', 'Teacher_email'], 'string', 'max' => 45],
+            [['Teacher_address'], 'string', 'max' => 100],
+            [['Teacher_contact'], 'string', 'max' => 20]
         ];
     }
 
@@ -47,13 +47,13 @@ class Teacher extends \yii\db\ActiveRecord
     {
         return [
             'Teacher_id' => 'Teacher ID',
-            'Teacher_lname' => 'Teacher Lname',
-            'Teacher_fname' => 'Teacher Fname',
-            'Teacher_mname' => 'Teacher Mname',
+            'Teacher_lastname' => 'Teacher Lastname',
+            'Teacher_firstname' => 'Teacher Firstname',
+            'Teacher_middlename' => 'Teacher Middlename',
             'Teacher_email' => 'Teacher Email',
-            'Teacher_addr' => 'Teacher Addr',
-            'Teacher_cont' => 'Teacher Cont',
-            'Teacher_stat' => 'Teacher Stat',
+            'Teacher_address' => 'Teacher Address',
+            'Teacher_contact' => 'Teacher Contact',
+            'Teacher_status' => 'Teacher Status',
         ];
     }
 }
