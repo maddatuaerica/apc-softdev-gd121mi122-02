@@ -6,11 +6,7 @@ $this->title = 'Arandia College';
 
 
     <div class="jumbotron">
-	
-		<div class="logo">
-		<img src="images/building.jpg" alt="" />
-		</div>
-		<h4>Arandia College, Inc. is a leading private educational institution in southern Metro Manila with campuses in Parañaque City and Taguig City providing pre-school, elementary, high school, and tertiary education courses.</h4>
+		<h2>Arandia College, Inc. is a leading private educational institution in southern Metro Manila with campuses in Parañaque City and Taguig City providing pre-school, elementary, high school, and tertiary education courses.</h2>
     </div>
 
     <div class="body-content">
