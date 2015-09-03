@@ -7,14 +7,15 @@ use Yii;
 /**
  * This is the model class for table "classes".
  *
- * @property string $Class_id
- * @property string $Section
- * @property string $Subject_Code
- * @property string $Student_id
- * @property string $Teacher_id
+ * @property integer $id
+ * @property string $section
+ * @property integer $student_id
+ * @property integer $subject_id
+ * @property integer $teacher_id
  *
- * @property Subject $subjectCode
+ * @property Teacher $teacher
  * @property Student $student
+ * @property Subject $subject
  */
 class Classes extends \yii\db\ActiveRecord
 {
@@ -32,10 +33,9 @@ class Classes extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Class_id', 'Section', 'Subject_Code', 'Student_id', 'Teacher_id'], 'required'],
-            [['Class_id', 'Student_id', 'Teacher_id'], 'string', 'max' => 10],
-            [['Section'], 'string', 'max' => 45],
-            [['Subject_Code'], 'string', 'max' => 20]
+            [['section', 'student_id', 'subject_id', 'teacher_id'], 'required'],
+            [['student_id', 'subject_id', 'teacher_id'], 'integer'],
+            [['section'], 'string', 'max' => 45]
         ];
     }
 
@@ -45,20 +45,20 @@ class Classes extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Class_id' => 'Class ID',
-            'Section' => 'Section',
-            'Subject_Code' => 'Subject  Code',
-            'Student_id' => 'Student ID',
-            'Teacher_id' => 'Teacher ID',
+            'id' => 'ID',
+            'section' => 'Section',
+            'student_id' => 'Student ID',
+            'subject_id' => 'Subject ID',
+            'teacher_id' => 'Teacher ID',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getSubjectCode()
+    public function getTeacher()
     {
-        return $this->hasOne(Subject::className(), ['Subject_code' => 'Subject_Code']);
+        return $this->hasOne(Teacher::className(), ['id' => 'teacher_id']);
     }
 
     /**
@@ -66,6 +66,14 @@ class Classes extends \yii\db\ActiveRecord
      */
     public function getStudent()
     {
-        return $this->hasOne(Student::className(), ['Student_id' => 'Student_id']);
+        return $this->hasOne(Student::className(), ['id' => 'student_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSubject()
+    {
+        return $this->hasOne(Subject::className(), ['id' => 'subject_id']);
     }
 }
