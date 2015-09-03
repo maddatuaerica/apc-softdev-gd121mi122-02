@@ -29,13 +29,28 @@ use yii\widgets\ActiveForm;
 	<option value="male">Male</option>
 	<option value="female">Female</option>
 	</select>
-
+<br>
     <?= $form->field($model, 'age')->textInput() ?>
 
     <?= $form->field($model, 'contact_number')->textInput() ?>
-
-    <?= $form->field($model, 'grade_level')->textInput(['maxlength' => 45]) ?>
-
+<br>
+	<select name="MyForm[grade_level]" id="Mygrade_level">
+	<option value="0">Select Grade Level</option>
+	<option value="nursery">Nursery</option>
+	<option value="kinder">Kinder</option>
+	<option value="preparatory">Preparatory</option>
+	<option value="grade1">Grade 1</option>
+	<option value="grade2">Grade 2</option>
+	<option value="grade3">Grade 3</option>
+	<option value="grade4">Grade 4</option>
+	<option value="grade5">Grade 5</option>
+	<option value="grade6">Grade 6</option>
+	<option value="grade7">Grade 7</option>
+	<option value="grade8">Grade 8</option>
+	<option value="grade9">Grade 9</option>
+	<option value="grade10">Grade 10</option>
+	</select>
+<br>
     <?= $form->field($model, 'previous_school')->textInput(['maxlength' => 100]) ?>
 
     <?= $form->field($model, 'father_name')->textInput(['maxlength' => 50]) ?>
