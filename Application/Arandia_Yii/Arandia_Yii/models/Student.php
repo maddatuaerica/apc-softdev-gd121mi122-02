@@ -7,15 +7,16 @@ use Yii;
 /**
  * This is the model class for table "student".
  *
- * @property string $Student_id
- * @property string $Student_lastname
- * @property string $Student_firstname
- * @property string $Student_middlename
- * @property string $Student_email
- * @property string $Student_address
- * @property string $Student_contact
+ * @property integer $id
+ * @property string $student_lastname
+ * @property string $student_firstname
+ * @property string $student_middlename
+ * @property string $student_email
+ * @property string $student_address
+ * @property integer $student_contact
  *
  * @property Classes[] $classes
+ * @property Grades[] $grades
  */
 class Student extends \yii\db\ActiveRecord
 {
@@ -33,10 +34,10 @@ class Student extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Student_id', 'Student_lastname', 'Student_firstname', 'Student_middlename', 'Student_email', 'Student_address', 'Student_contact'], 'required'],
-            [['Student_id'], 'string', 'max' => 15],
-            [['Student_lastname', 'Student_firstname', 'Student_middlename', 'Student_email', 'Student_contact'], 'string', 'max' => 45],
-            [['Student_address'], 'string', 'max' => 100]
+            [['student_lastname', 'student_firstname', 'student_middlename', 'student_email', 'student_address', 'student_contact'], 'required'],
+            [['student_contact'], 'integer'],
+            [['student_lastname', 'student_firstname', 'student_middlename', 'student_email'], 'string', 'max' => 45],
+            [['student_address'], 'string', 'max' => 100]
         ];
     }
 
@@ -46,13 +47,13 @@ class Student extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Student_id' => 'Student ID',
-            'Student_lastname' => 'Student Lastname',
-            'Student_firstname' => 'Student Firstname',
-            'Student_middlename' => 'Student Middlename',
-            'Student_email' => 'Student Email',
-            'Student_address' => 'Student Address',
-            'Student_contact' => 'Student Contact',
+            'id' => 'ID',
+            'student_lastname' => 'Student Lastname',
+            'student_firstname' => 'Student Firstname',
+            'student_middlename' => 'Student Middlename',
+            'student_email' => 'Student Email',
+            'student_address' => 'Student Address',
+            'student_contact' => 'Student Contact',
         ];
     }
 
@@ -61,6 +62,14 @@ class Student extends \yii\db\ActiveRecord
      */
     public function getClasses()
     {
-        return $this->hasMany(Classes::className(), ['Student_id' => 'Student_id']);
+        return $this->hasMany(Classes::className(), ['student_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getGrades()
+    {
+        return $this->hasMany(Grades::className(), ['student_id' => 'id']);
     }
 }
