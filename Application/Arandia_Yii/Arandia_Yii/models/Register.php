@@ -7,28 +7,27 @@ use Yii;
 /**
  * This is the model class for table "register".
  *
- * @property string $id_number
+ * @property integer $id
  * @property string $lastname
  * @property string $firstname
  * @property string $middlename
  * @property string $address
  * @property string $birthday
  * @property string $birthplace
- * @property integer $gender
+ * @property string $gender
  * @property integer $age
- * @property integer $contact_num
+ * @property integer $contact_number
  * @property string $grade_level
- * @property string $prev_school
+ * @property string $previous_school
  * @property string $father_name
  * @property string $father_occupation
  * @property string $mother_name
  * @property string $mother_occupation
- * @property string $emerg_name
+ * @property string $guardian
  * @property string $relation
- * @property integer $tel_num
+ * @property integer $telephone_number
  * @property string $username
  * @property string $password
- * @property string $usertype
  */
 class Register extends \yii\db\ActiveRecord
 {
@@ -46,13 +45,12 @@ class Register extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_number', 'lastname', 'firstname', 'middlename', 'address', 'birthday', 'birthplace', 'gender', 'age', 'contact_num', 'grade_level', 'prev_school', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'emerg_name', 'relation', 'tel_num', 'username', 'password', 'usertype'], 'required'],
+            [['lastname', 'firstname', 'middlename', 'address', 'birthday', 'birthplace', 'gender', 'age', 'contact_number', 'grade_level', 'previous_school', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'guardian', 'relation', 'telephone_number', 'username', 'password'], 'required'],
             [['birthday'], 'safe'],
-            [['gender', 'age', 'contact_num', 'tel_num'], 'integer'],
-            [['id_number'], 'string', 'max' => 10],
-            [['lastname', 'firstname', 'middlename', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'emerg_name'], 'string', 'max' => 50],
-            [['address', 'birthplace', 'prev_school'], 'string', 'max' => 100],
-            [['grade_level', 'relation', 'username', 'password', 'usertype'], 'string', 'max' => 45]
+            [['age', 'contact_number', 'telephone_number'], 'integer'],
+            [['lastname', 'firstname', 'middlename', 'birthplace', 'father_name', 'father_occupation', 'mother_name', 'mother_occupation', 'guardian'], 'string', 'max' => 50],
+            [['address', 'previous_school'], 'string', 'max' => 100],
+            [['gender', 'grade_level', 'relation', 'username', 'password'], 'string', 'max' => 45]
         ];
     }
 
@@ -62,7 +60,7 @@ class Register extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_number' => 'Id Number',
+            'id' => 'ID',
             'lastname' => 'Lastname',
             'firstname' => 'Firstname',
             'middlename' => 'Middlename',
@@ -71,19 +69,18 @@ class Register extends \yii\db\ActiveRecord
             'birthplace' => 'Birthplace',
             'gender' => 'Gender',
             'age' => 'Age',
-            'contact_num' => 'Contact Num',
+            'contact_number' => 'Contact Number',
             'grade_level' => 'Grade Level',
-            'prev_school' => 'Prev School',
+            'previous_school' => 'Previous School',
             'father_name' => 'Father Name',
             'father_occupation' => 'Father Occupation',
             'mother_name' => 'Mother Name',
             'mother_occupation' => 'Mother Occupation',
-            'emerg_name' => 'Emerg Name',
+            'guardian' => 'Guardian',
             'relation' => 'Relation',
-            'tel_num' => 'Tel Num',
+            'telephone_number' => 'Telephone Number',
             'username' => 'Username',
             'password' => 'Password',
-            'usertype' => 'Usertype',
         ];
     }
 }

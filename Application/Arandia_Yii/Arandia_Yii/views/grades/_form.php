@@ -1,7 +1,10 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
+use app\models\Subject;
+use app\models\Student;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Grades */
@@ -20,11 +23,17 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'fourth_grading')->textInput(['maxlength' => 10]) ?>
 
-    <?= $form->field($model, 'Final_grading')->textInput() ?>
+    <?= $form->field($model, 'final_grading')->textInput(['maxlength' => 10]) ?>
 
-    <?= $form->field($model, 'Subject_code')->textInput(['maxlength' => 20]) ?>
+	<?= $form->field($model, 'subject_id')->dropDownList(
+			ArrayHelper::map(Subject::find()->all(),'subject_id','subject_code'),
+			['prompt'=>'Select Subject'] 
+	) ?>
 
-    <?= $form->field($model, 'Student_id')->textInput(['maxlength' => 15]) ?>
+	<?= $form->field($model, 'student_id')->dropDownList(
+			ArrayHelper::map(Student::find()->all(),'student_id','student_lastname'),
+			['prompt'=>'Select Student'] 
+	) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

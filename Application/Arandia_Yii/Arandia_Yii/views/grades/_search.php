@@ -15,6 +15,8 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
+    <?= $form->field($model, 'id') ?>
+
     <?= $form->field($model, 'first_grading') ?>
 
     <?= $form->field($model, 'second_grading') ?>
@@ -23,11 +25,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'fourth_grading') ?>
 
-    <?= $form->field($model, 'Final_grading') ?>
+    <?php // echo $form->field($model, 'final_grading') ?>
 
-    <?php // echo $form->field($model, 'Subject_code') ?>
+    <?php // echo $form->field($model, 'subject_id') ?>
 
-    <?php // echo $form->field($model, 'Student_id') ?>
+    <?php // echo $form->field($model, 'student_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
