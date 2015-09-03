@@ -24,7 +24,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'birthplace')->textInput(['maxlength' => 50]) ?>
 
-    <?= $form->field($model, 'gender')->textInput(['maxlength' => 45]) ?>
+	<select name="MyForm[gender]" id="MyForm_gender">
+	<option value="0">Select Gender</option>
+	<option value="male">Male</option>
+	<option value="female">Female</option>
+	</select>
 
     <?= $form->field($model, 'age')->textInput() ?>
 
