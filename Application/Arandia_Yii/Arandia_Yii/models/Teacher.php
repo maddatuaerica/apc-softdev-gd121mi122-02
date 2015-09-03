@@ -8,13 +8,16 @@ use Yii;
  * This is the model class for table "teacher".
  *
  * @property integer $id
- * @property string $Teacher_lastname
- * @property string $Teacher_firstname
- * @property string $Teacher_middlename
- * @property string $Teacher_email
- * @property string $Teacher_address
- * @property string $Teacher_contact
- * @property string $Teacher_status
+ * @property string $teacher_lastname
+ * @property string $teacher_firstname
+ * @property string $teacher_middlename
+ * @property string $teacher_email
+ * @property string $teacher_address
+ * @property integer $teacher_contact
+ * @property string $teacher_status
+ *
+ * @property Classes[] $classes
+ * @property Subject[] $subjects
  */
 class Teacher extends \yii\db\ActiveRecord
 {
@@ -32,11 +35,10 @@ class Teacher extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Teacher_lastname', 'Teacher_firstname', 'Teacher_middlename', 'Teacher_email', 'Teacher_address', 'Teacher_contact', 'Teacher_status'], 'required'],
-            [['Teacher_lastname', 'Teacher_firstname', 'Teacher_middlename', 'Teacher_email'], 'string', 'max' => 45],
-            [['Teacher_address'], 'string', 'max' => 100],
-            [['Teacher_contact'], 'string', 'max' => 20],
-            [['Teacher_status'], 'string', 'max' => 10]
+            [['teacher_lastname', 'teacher_firstname', 'teacher_middlename', 'teacher_email', 'teacher_address', 'teacher_contact', 'teacher_status'], 'required'],
+            [['teacher_contact'], 'integer'],
+            [['teacher_lastname', 'teacher_firstname', 'teacher_middlename', 'teacher_email', 'teacher_status'], 'string', 'max' => 45],
+            [['teacher_address'], 'string', 'max' => 100]
         ];
     }
 
@@ -47,13 +49,29 @@ class Teacher extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'Teacher_lastname' => 'Teacher Lastname',
-            'Teacher_firstname' => 'Teacher Firstname',
-            'Teacher_middlename' => 'Teacher Middlename',
-            'Teacher_email' => 'Teacher Email',
-            'Teacher_address' => 'Teacher Address',
-            'Teacher_contact' => 'Teacher Contact',
-            'Teacher_status' => 'Teacher Status',
+            'teacher_lastname' => 'Teacher Lastname',
+            'teacher_firstname' => 'Teacher Firstname',
+            'teacher_middlename' => 'Teacher Middlename',
+            'teacher_email' => 'Teacher Email',
+            'teacher_address' => 'Teacher Address',
+            'teacher_contact' => 'Teacher Contact',
+            'teacher_status' => 'Teacher Status',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getClasses()
+    {
+        return $this->hasMany(Classes::className(), ['teacher_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSubjects()
+    {
+        return $this->hasMany(Subject::className(), ['teacher_id' => 'id']);
     }
 }

@@ -12,19 +12,17 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Student_id')->textInput(['maxlength' => 15]) ?>
+    <?= $form->field($model, 'student_lastname')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'Student_lastname')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'student_firstname')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'Student_firstname')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'student_middlename')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'Student_middlename')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'student_email')->textInput(['maxlength' => 45]) ?>
 
-    <?= $form->field($model, 'Student_email')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'student_address')->textInput(['maxlength' => 100]) ?>
 
-    <?= $form->field($model, 'Student_address')->textInput(['maxlength' => 100]) ?>
-
-    <?= $form->field($model, 'Student_contact')->textInput(['maxlength' => 45]) ?>
+    <?= $form->field($model, 'student_contact')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

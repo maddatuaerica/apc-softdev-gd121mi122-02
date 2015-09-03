@@ -18,8 +18,8 @@ class TeacherSearch extends Teacher
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['Teacher_lastname', 'Teacher_firstname', 'Teacher_middlename', 'Teacher_email', 'Teacher_address', 'Teacher_contact', 'Teacher_status'], 'safe'],
+            [['id', 'teacher_contact'], 'integer'],
+            [['teacher_lastname', 'teacher_firstname', 'teacher_middlename', 'teacher_email', 'teacher_address', 'teacher_status'], 'safe'],
         ];
     }
 
@@ -57,15 +57,15 @@ class TeacherSearch extends Teacher
 
         $query->andFilterWhere([
             'id' => $this->id,
+            'teacher_contact' => $this->teacher_contact,
         ]);
 
-        $query->andFilterWhere(['like', 'Teacher_lastname', $this->Teacher_lastname])
-            ->andFilterWhere(['like', 'Teacher_firstname', $this->Teacher_firstname])
-            ->andFilterWhere(['like', 'Teacher_middlename', $this->Teacher_middlename])
-            ->andFilterWhere(['like', 'Teacher_email', $this->Teacher_email])
-            ->andFilterWhere(['like', 'Teacher_address', $this->Teacher_address])
-            ->andFilterWhere(['like', 'Teacher_contact', $this->Teacher_contact])
-            ->andFilterWhere(['like', 'Teacher_status', $this->Teacher_status]);
+        $query->andFilterWhere(['like', 'teacher_lastname', $this->teacher_lastname])
+            ->andFilterWhere(['like', 'teacher_firstname', $this->teacher_firstname])
+            ->andFilterWhere(['like', 'teacher_middlename', $this->teacher_middlename])
+            ->andFilterWhere(['like', 'teacher_email', $this->teacher_email])
+            ->andFilterWhere(['like', 'teacher_address', $this->teacher_address])
+            ->andFilterWhere(['like', 'teacher_status', $this->teacher_status]);
 
         return $dataProvider;
     }
