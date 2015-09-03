@@ -18,7 +18,8 @@ class ClassesSearch extends Classes
     public function rules()
     {
         return [
-            [['Class_id', 'Section', 'Subject_Code', 'Student_id', 'Teacher_id'], 'safe'],
+            [['id', 'student_id', 'subject_id', 'teacher_id'], 'integer'],
+            [['section'], 'safe'],
         ];
     }
 
@@ -54,11 +55,14 @@ class ClassesSearch extends Classes
             return $dataProvider;
         }
 
-        $query->andFilterWhere(['like', 'Class_id', $this->Class_id])
-            ->andFilterWhere(['like', 'Section', $this->Section])
-            ->andFilterWhere(['like', 'Subject_Code', $this->Subject_Code])
-            ->andFilterWhere(['like', 'Student_id', $this->Student_id])
-            ->andFilterWhere(['like', 'Teacher_id', $this->Teacher_id]);
+        $query->andFilterWhere([
+            'id' => $this->id,
+            'student_id' => $this->student_id,
+            'subject_id' => $this->subject_id,
+            'teacher_id' => $this->teacher_id,
+        ]);
+
+        $query->andFilterWhere(['like', 'section', $this->section]);
 
         return $dataProvider;
     }
