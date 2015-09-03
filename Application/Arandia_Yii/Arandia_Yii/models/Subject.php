@@ -7,11 +7,14 @@ use Yii;
 /**
  * This is the model class for table "subject".
  *
- * @property string $Subject_code
- * @property string $Subject_description
- * @property integer $Teacher_id
+ * @property integer $id
+ * @property string $subject_code
+ * @property string $subject_description
+ * @property integer $teacher_id
  *
  * @property Classes[] $classes
+ * @property Grades[] $grades
+ * @property Teacher $teacher
  */
 class Subject extends \yii\db\ActiveRecord
 {
@@ -29,10 +32,9 @@ class Subject extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Subject_code', 'Subject_description', 'Teacher_id'], 'required'],
-            [['Teacher_id'], 'integer'],
-            [['Subject_code'], 'string', 'max' => 20],
-            [['Subject_description'], 'string', 'max' => 45]
+            [['subject_code', 'subject_description', 'teacher_id'], 'required'],
+            [['teacher_id'], 'integer'],
+            [['subject_code', 'subject_description'], 'string', 'max' => 45]
         ];
     }
 
@@ -42,9 +44,10 @@ class Subject extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'Subject_code' => 'Subject Code',
-            'Subject_description' => 'Subject Description',
-            'Teacher_id' => 'Teacher ID',
+            'id' => 'ID',
+            'subject_code' => 'Subject Code',
+            'subject_description' => 'Subject Description',
+            'teacher_id' => 'Teacher ID',
         ];
     }
 
@@ -53,6 +56,22 @@ class Subject extends \yii\db\ActiveRecord
      */
     public function getClasses()
     {
-        return $this->hasMany(Classes::className(), ['Subject_Code' => 'Subject_code']);
+        return $this->hasMany(Classes::className(), ['subject_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getGrades()
+    {
+        return $this->hasMany(Grades::className(), ['subject_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getTeacher()
+    {
+        return $this->hasOne(Teacher::className(), ['id' => 'teacher_id']);
     }
 }

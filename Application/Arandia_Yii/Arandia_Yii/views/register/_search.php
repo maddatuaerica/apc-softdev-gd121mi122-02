@@ -33,11 +33,11 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'age') ?>
 
-    <?php // echo $form->field($model, 'contact_number') ?>
+    <?php // echo $form->field($model, 'contact_num') ?>
 
     <?php // echo $form->field($model, 'grade_level') ?>
 
-    <?php // echo $form->field($model, 'previous_school') ?>
+    <?php // echo $form->field($model, 'prev_school') ?>
 
     <?php // echo $form->field($model, 'father_name') ?>
 
@@ -47,11 +47,11 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'mother_occupation') ?>
 
-    <?php // echo $form->field($model, 'emergency_contact') ?>
+    <?php // echo $form->field($model, 'emerg_name') ?>
 
     <?php // echo $form->field($model, 'relation') ?>
 
-    <?php // echo $form->field($model, 'telephone_number') ?>
+    <?php // echo $form->field($model, 'tel_num') ?>
 
     <?php // echo $form->field($model, 'username') ?>
 
