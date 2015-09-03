@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Register */
 
-$this->title = $model->id_number;
+$this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Registers', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id_number], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id_number], [
+        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -28,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id_number',
+            'id',
             'lastname',
             'firstname',
             'middlename',
@@ -37,19 +37,18 @@ $this->params['breadcrumbs'][] = $this->title;
             'birthplace',
             'gender',
             'age',
-            'contact_num',
+            'contact_number',
             'grade_level',
-            'prev_school',
+            'previous_school',
             'father_name',
             'father_occupation',
             'mother_name',
             'mother_occupation',
-            'emerg_name',
+            'guardian',
             'relation',
-            'tel_num',
+            'telephone_number',
             'username',
             'password',
-            'usertype',
         ],
     ]) ?>
 
