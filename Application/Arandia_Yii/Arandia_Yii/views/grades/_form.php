@@ -1,7 +1,9 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
+use app\models\Subject;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Grades */
@@ -22,7 +24,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'final_grading')->textInput(['maxlength' => 10]) ?>
 
-    <?= $form->field($model, 'subject_id')->textInput() ?>
+	<?= $form->field($model, 'subject_id')->dropDownList(
+			ArrayHelper::map(Subject::find()->all(),'subject_id','subject_code'),
+			['prompt'=>'Select Subject'] 
+	) ?>
 
     <?= $form->field($model, 'student_id')->textInput() ?>
 
