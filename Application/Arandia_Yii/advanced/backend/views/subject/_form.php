@@ -1,7 +1,9 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
+use backend\models\Teacher;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Subject */
@@ -17,6 +19,11 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'subject_description')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'teacher_id')->textInput() ?>
+	<?= $form->field($model, 'teacher_id')->dropDownlist(
+		ArrayHelper::map(Teacher::find()->all(),'teacher_id','teacher_lastname'),
+		['prompt'=>'Select Teacher']
+	
+	) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
