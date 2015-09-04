@@ -24,12 +24,12 @@ use backend\models\Teacher;
 	) ?>
 
     <?= $form->field($model, 'subject_id')->dropDownList(
-		ArrayHelper::map(Student::find()->all(),'subject_id','subject_name'),
+		ArrayHelper::map(Subject::find()->all(),'subject_id','subject_name'),
 		['prompt'=>'Subject ID']
 	) ?>
 
     <?= $form->field($model, 'teacher_id')->dropDownList(
-		ArrayHelper::map(Student::find()->all(),'teacher_id','teacher_lastname'),
+		ArrayHelper::map(Teacher::find()->all(),'teacher_id','teacher_lastname'),
 		['prompt'=>'Teacher ID']
 	
 	) ?>
