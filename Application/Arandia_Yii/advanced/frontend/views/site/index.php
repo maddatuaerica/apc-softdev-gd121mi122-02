@@ -7,45 +7,59 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead">Arandia College, Inc. is a leading private educational institution in southern Metro Manila with campuses in Parañaque City and Taguig City providing pre-school, elementary, high school, and tertiary education courses.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
 
     <div class="body-content">
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>Vision:</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>The Arandia College Inc., a private non-stock, nonprofit, and non- sectarian institution of learning envisions the full development of the learner through proper instruction and training with complete physical facilities to produce individuals who are God-fearing, values-oriented, morally upright and nationalistic capable of competing in the global revolution of knowledge which contributes largely in the progress of the community, society and country.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+               
             </div>
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>Mission:</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>In pursuit of Vision, Arandia College Inc. commits to: <br>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+				<li>Provide affordable quality education through effective instruction by competent teachers under the leadership of caring school officials.</li><br>
+
+				<li>Inculcate love of God, Country, Humanity and Nature.</li><br>
+
+				<li>Promote culture of competitiveness in all sectors of the academic community.</li><br>
+
+				<li>Develop young citizens' rights, duties and responsibilities for active participation in the progressive and productive home and community life.</li><br>
+
+				<li>Keep the learner abreast of technological, vocational and global trends and issues.</li><br>
+
+				<li>Enrich teachers; competencies in bringing out their best as educators.</li><br>
+
+				<li>Commit the school as leading institution in the society.</li><br>
+</p>
+
+
             </div>
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>Offers:</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p><li>Nursery - 3 years and 3 years old and a half by June of the academic year.</li><br>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+				<li>Kinder - 4 years and 4 years old and a half by June of the academic year.</li><br>
+
+				<li>Preparatory - 5 years and 5 years old and a half by June of the academic year.</li><br>
+
+				<li>Elementary</li><br>
+
+				<li>High School</li><br>
+</p>
+
+              
             </div>
         </div>
 
