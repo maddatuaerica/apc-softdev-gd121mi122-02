@@ -1,7 +1,11 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
+use backend\models\Student;
+use backend\models\Subject;
+use backend\models\Teacher;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Classes */
@@ -14,11 +18,21 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'section')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'student_id')->textInput() ?>
+    <?= $form->field($model, 'student_id')->dropDownList(
+		ArrayHelper::map(Student::find()->all(),'student_id','student_lastname'),
+		['prompt'=>'Student ID']
+	) ?>
 
-    <?= $form->field($model, 'subject_id')->textInput() ?>
+    <?= $form->field($model, 'subject_id')->dropDownList(
+		ArrayHelper::map(Student::find()->all(),'subject_id','subject_name'),
+		['prompt'=>'Subject ID']
+	) ?>
 
-    <?= $form->field($model, 'teacher_id')->textInput() ?>
+    <?= $form->field($model, 'teacher_id')->dropDownList(
+		ArrayHelper::map(Student::find()->all(),'teacher_id','teacher_lastname'),
+		['prompt'=>'Teacher ID']
+	
+	) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
