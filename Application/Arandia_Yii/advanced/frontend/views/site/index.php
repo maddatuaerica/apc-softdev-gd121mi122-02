@@ -112,6 +112,7 @@ swapImage();
 </td> 
 
 </table> 
+
     <div class="body-content">
 
         <div class="row">
@@ -124,8 +125,6 @@ swapImage();
             </div>
             <div class="col-lg-4">
                 <h2>Mission</h2>
-
-                <h2>Mission:</h2>
 
                 <p>In pursuit of Vision, Arandia College Inc. commits to:
                         <p>A.   Provide affordable quality education through effective instruction by competent teachers under the leadership of caring school officials.</p>
