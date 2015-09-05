@@ -116,14 +116,14 @@ swapImage();
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Vision</h2>
+                <h2>Vision:</h2>
 
                 <p>The Arandia College Inc., a private non-stock, nonprofit, and non- sectarian institution of learning envisions the full development of the learner through proper 
                     instruction and training with complete physical facilities to produce individuals who are God-fearing, values-oriented, morally upright and nationalistic capable 
                     of competing in the global revolution of knowledge which contributes largely in the progress of the community, society and country.</p>
             </div>
             <div class="col-lg-4">
-                <h2>Mission</h2>
+                
 
                 <h2>Mission:</h2>
 
