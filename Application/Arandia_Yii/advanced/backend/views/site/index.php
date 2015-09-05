@@ -9,6 +9,7 @@ $this->title = 'Arandia College';
     <div class="jumbotron">
         <a class="btn btn-lg btn-success" href="http://localhost/advanced/backend/web/index.php?r=teacher">Teacher</a>
         <a class="btn btn-lg btn-success" href="http://localhost/advanced/backend/web/index.php?r=student">Student</a>
+        <a class="btn btn-lg btn-success" href="http://localhost/advanced/backend/web/index.php?r=grades">Grade</a>
 
     </div>
 
