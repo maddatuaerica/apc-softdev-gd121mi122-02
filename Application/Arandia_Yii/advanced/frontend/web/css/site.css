@@ -10,7 +10,9 @@ body {
 background-color: #08088A;
 padding: 10px 0px 10px;
 }
-
+.navbar-inverse .navbar-brand {
+  color: black;
+}
 .wrap {
     min-height: 100%;
     height: auto;

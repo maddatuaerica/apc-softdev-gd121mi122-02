@@ -4,13 +4,14 @@
 
 $this->title = 'Arandia College';
 ?>
-<!---div class="site-index">
+<div class="site-index">
 
    <div class="jumbotron">
-                <h2>Arandia College, Inc. is a leading private educational institution in southern Metro Manila with campuses in Parañaque City and Taguig City providing pre-school, elementary, high school, and tertiary education courses.</h2>
+                <h3>Arandia College, Inc. is a leading private educational institution in southern Metro Manila with campuses in Parañaque City and Taguig City providing pre-school, elementary, high school, and tertiary education courses.</h3>
 			
-   </div-->
-    <div class="site-index">
+   </div-->  
+
+<a class="btn btn-lg btn-success"href="http://localhost/advanced/frontend/web/index.php?r=grades">Grades</a>
 
 <script type="text/javascript"> 
 
@@ -95,7 +96,7 @@ swapImage();
 
 <td> 
 
-<img name="slide" id="slide" alt ="my images" height="285" width="1125" src="building.jpg"/> 
+<img name="slide" id="slide" alt ="my images" height="500" width="1000" src="building.jpg"/> 
 
 </td> 
 
