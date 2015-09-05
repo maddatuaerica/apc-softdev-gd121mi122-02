@@ -9,8 +9,9 @@ $this->title = 'Arandia College';
    <div class="jumbotron">
                 <h2>Arandia College, Inc. is a leading private educational institution in southern Metro Manila with campuses in Parañaque City and Taguig City providing pre-school, elementary, high school, and tertiary education courses.</h2>
 			
-   </div-->
-    <div class="site-index">
+   </div-->     <p><a class="btn btn-lg btn-success"
+href="http://localhost/advanced/backend/web/index.php?r=grades">Grades</a></p>     <div class
+="site-index">
 
 <script type="text/javascript"> 
 
