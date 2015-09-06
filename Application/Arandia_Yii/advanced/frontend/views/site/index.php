@@ -4,13 +4,12 @@
 
 $this->title = 'Arandia College';
 ?>
-<!---div class="site-index">
+<div class="site-index">
 
    <div class="jumbotron">
-                <h2>Arandia College, Inc. is a leading private educational institution in southern Metro Manila with campuses in Parañaque City and Taguig City providing pre-school, elementary, high school, and tertiary education courses.</h2>
+                <h3>Arandia College, Inc. is a leading private educational institution in southern Metro Manila with campuses in Parañaque City and Taguig City providing pre-school, elementary, high school, and tertiary education courses.</h3>
 			
-   </div-->
-    <div class="site-index">
+   </div-->  
 
 <script type="text/javascript"> 
 
@@ -95,7 +94,11 @@ swapImage();
 
 <td> 
 
+<<<<<<< HEAD
 <img name="slide" id="slide" alt ="my images" height="350" width="1125" src="building.jpg"/> 
+=======
+<img name="slide" id="slide" alt ="my images" height="500" width="1000" src="building.jpg"/> 
+>>>>>>> 2632c89e4d736d0d5ba93bd8a7567ed7595099fb
 
 </td> 
 
@@ -117,14 +120,14 @@ swapImage();
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Vision</h2>
+                <h2>Vision:</h2>
 
                 <p>The Arandia College Inc., a private non-stock, nonprofit, and non- sectarian institution of learning envisions the full development of the learner through proper 
                     instruction and training with complete physical facilities to produce individuals who are God-fearing, values-oriented, morally upright and nationalistic capable 
                     of competing in the global revolution of knowledge which contributes largely in the progress of the community, society and country.</p>
             </div>
             <div class="col-lg-4">
-                <h2>Mission</h2>
+                
 
                 <p>In pursuit of Vision, Arandia College Inc. commits to:
                         <p>A.   Provide affordable quality education through effective instruction by competent teachers under the leadership of caring school officials.</p>

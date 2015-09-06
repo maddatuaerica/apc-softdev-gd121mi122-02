@@ -3,7 +3,11 @@ body {
     height: 100%;
 		background: #81DAF5;
 	color: #000000;
+<<<<<<< HEAD
 	font-family: Cursive;
+=======
+	font-family: Arial;
+>>>>>>> 2632c89e4d736d0d5ba93bd8a7567ed7595099fb
 }
 
 .navbar{
