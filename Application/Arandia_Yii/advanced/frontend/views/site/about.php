@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\helper\Url;
 
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
@@ -15,8 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	The school has only a few students and also few staff. The school has its own database system and an administrator manages it. 
 	As we keep coming to them, we have notice some problems in their systems so that's why we have proposed to create a new system for. 
 	The project provides information privacy for the users. A login page is always prompt before anyone can access the main pages.</p>
-	
-	
+
 	<br><br>
 	<h2>History</h2>
     <p>
@@ -32,5 +32,4 @@ $this->params['breadcrumbs'][] = $this->title;
 		AC started Pre-school levels in 1999 with its first batch of 56 students and 8 faculty members. 
 		The school was able to acquire additional 5 lots adjacent to the original school campus.
     </p>
-
 </div>
