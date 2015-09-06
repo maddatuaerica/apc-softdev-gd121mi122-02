@@ -4,13 +4,13 @@
 
 $this->title = 'Arandia College';
 ?>
-<div class="site-index">
+<!--div class="site-index">
 
    <div class="jumbotron">
                 <h3>Arandia College, Inc. is a leading private educational institution in southern Metro Manila with campuses in Parañaque City and Taguig City providing pre-school, elementary, high school, and tertiary education courses.</h3>
 			
    </div-->  
-
+<div class="site-index">
 <script type="text/javascript"> 
 
 var i = 0; 
@@ -94,15 +94,11 @@ swapImage();
 
 <td> 
 
-<<<<<<< HEAD
 <img name="slide" id="slide" alt ="my images" height="350" width="1125" src="building.jpg"/> 
-=======
-<img name="slide" id="slide" alt ="my images" height="500" width="1000" src="building.jpg"/> 
->>>>>>> 2632c89e4d736d0d5ba93bd8a7567ed7595099fb
 
-</td> 
+</td>
 
-</tr> 
+</tr>
 
 <tr> 
 
@@ -128,7 +124,7 @@ swapImage();
             </div>
             <div class="col-lg-4">
                 
-
+                <h2>Mission:</h2>
                 <p>In pursuit of Vision, Arandia College Inc. commits to:
                         <p>A.   Provide affordable quality education through effective instruction by competent teachers under the leadership of caring school officials.</p>
                         <p>B.   Inculcate love of God, Country, Humanity and Nature.</p>
