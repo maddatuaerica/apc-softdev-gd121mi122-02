@@ -6,7 +6,7 @@ $this->title = 'Arandia College';
 ?>
     <div class="site-index">
 
-<<<<<<< HEAD
+
 <script type="text/javascript"> 
 
 var i = 0; 
