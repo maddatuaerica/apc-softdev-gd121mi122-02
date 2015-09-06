@@ -11,8 +11,6 @@ $this->title = 'Arandia College';
 			
    </div-->  
 
-<a class="btn btn-lg btn-success"href="http://localhost/advanced/frontend/web/index.php?r=grades">Grades</a>
-
 <script type="text/javascript"> 
 
 var i = 0; 
