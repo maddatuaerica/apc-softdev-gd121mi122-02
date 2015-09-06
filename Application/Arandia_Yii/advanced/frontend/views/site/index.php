@@ -95,7 +95,7 @@ swapImage();
 
 <td> 
 
-<img name="slide" id="slide" alt ="my images" height="285" width="1125" src="building.jpg"/> 
+<img name="slide" id="slide" alt ="my images" height="350" width="1125" src="building.jpg"/> 
 
 </td> 
 
