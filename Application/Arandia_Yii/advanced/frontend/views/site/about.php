@@ -111,18 +111,20 @@ swapImage();
 
 </table> 
 <div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
-<br>
+<div class="row">
+            <div class="col-lg-5">
+            	<h2>About</h2>
 	<p>Arandia College was built as small school for elementary children until they expand and expand and now it has college department. 
 	Arandia was the family name of the owner, Mrs. Yolanda Arandia.It is a non-sectarian private school in Paranaque. 
 	The school has only a few students and also few staff. The school has its own database system and an administrator manages it. 
 	As we keep coming to them, we have notice some problems in their systems so that's why we have proposed to create a new system for. 
 	The project provides information privacy for the users. A login page is always prompt before anyone can access the main pages.</p>
+</div>
 
-	<br><br>
+<div class="col-lg-7">
 	<h2>History</h2>
     <p>
-        In 1999, Mr. Roselio R. Arandia & Dr. Yolanda DC. Arandia were offered to purchase a lot at 
+        In 1999, Mr. Roselio R. Arandia and Dr. Yolanda DC. Arandia were offered to purchase a lot at 
 		Lot 1 Blk. 1 F. Valarao St., Airport Village, Moonwalk by Mrs. Josefina Roxas, then owner of the said property. 
 		The spouses initially refused to accept the offer as they had no plans to develop the property or use it for business, at the time. 
 		As it happened, Mrs. Ma. Isabel Valerio, a family friend proposed to the Arandia spouses to put up a pre-school learning center in their garage. 
@@ -134,4 +136,5 @@ swapImage();
 		AC started Pre-school levels in 1999 with its first batch of 56 students and 8 faculty members. 
 		The school was able to acquire additional 5 lots adjacent to the original school campus.
     </p>
+</div>
 </div>
