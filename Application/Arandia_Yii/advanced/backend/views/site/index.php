@@ -4,7 +4,7 @@
 
 $this->title = 'Arandia College';
 ?>
-    <div class="site-index">
+    <!--div class="site-index">
 
 
 <script type="text/javascript"> 
@@ -195,8 +195,7 @@ $this->title = 'Arandia College';
             </div>
         </div>
 
-    </div>
-=======
+    </div-->
     <div class="jumbotron">
         <a class="btn btn-lg btn-success" href="http://localhost/advanced/backend/web/index.php?r=teacher">Teacher</a>
         <a class="btn btn-lg btn-success" href="http://localhost/advanced/backend/web/index.php?r=student">Student</a>
@@ -205,10 +204,6 @@ $this->title = 'Arandia College';
         <a class="btn btn-lg btn-success" href="http://localhost/advanced/backend/web/index.php?r=register">Register</a>
 
     </div>
-
-
-
->>>>>>> 2632c89e4d736d0d5ba93bd8a7567ed7595099fb
 </div>
 
     
