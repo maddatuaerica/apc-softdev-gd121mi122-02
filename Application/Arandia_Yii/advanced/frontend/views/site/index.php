@@ -115,14 +115,14 @@ swapImage();
     <div class="body-content">
 
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <h2>Vision:</h2>
 
                 <p>The Arandia College Inc., a private non-stock, nonprofit, and non- sectarian institution of learning envisions the full development of the learner through proper 
                     instruction and training with complete physical facilities to produce individuals who are God-fearing, values-oriented, morally upright and nationalistic capable 
                     of competing in the global revolution of knowledge which contributes largely in the progress of the community, society and country.</p>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 
                 <h2>Mission:</h2>
                 <p>In pursuit of Vision, Arandia College Inc. commits to:
@@ -135,7 +135,7 @@ swapImage();
                         <p>G.   Commit the school as leading institution in the society.</p>
 
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <h2>Offers:</h2>
 
                  <p>Nursery - 3 years and 3 years old and a half by June of the academic year.</p>
