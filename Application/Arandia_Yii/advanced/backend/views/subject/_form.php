@@ -19,7 +19,7 @@ use backend\models\Teacher;
     <?= $form->field($model, 'subject_description')->textInput(['maxlength' => true]) ?>
 
 	<?= $form->field($model, 'teacher_id')->dropDownlist(
-		ArrayHelper::map(Teacher::find()->all(),'teacher_id','teacher_lastname'),
+		ArrayHelper::map(Teacher::find()->all(),'id','teacher_lastname'),
 		['prompt'=>'Select Teacher']
 	
 	) ?>
