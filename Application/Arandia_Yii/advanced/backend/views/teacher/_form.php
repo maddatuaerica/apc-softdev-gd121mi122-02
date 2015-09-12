@@ -24,16 +24,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'teacher_contact')->textInput() ?>
 	
-	
-		<select name="MyForm[status]" id="MyForm_status">
-	<option value="0">Please select your Status</option>
-	<option value="Single">Single</option>
-	<option value="Married">Married</option>
-	<option value="Divorced">Divorced</option>
-	<option value="Separated">Separated</option>
-	<option value="Widowed">Widowed</option>
-	</select>
-
+	<?= $form->field($model, 'teacher_status')->textInput() ?>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

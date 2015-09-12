@@ -1,13 +1,14 @@
 html,
 body {
     height: 100%;
-		background: #81DAF5;
+	background: #81DAF5;
 	color: #000000;
 	font-family: Arial;
 }
 
 .navbar{
-background-color: #08088A;
+/*background-color: #08088A;*/
+background-color: #003399;
 padding: 10px 0px 10px;
 }
 
